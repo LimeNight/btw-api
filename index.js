@@ -13,7 +13,8 @@ const port = process.env.PORT || 5000
 // Add middleware
 app.use(express.urlencoded({ extended: false }))
 app.use(cors({
-  credentials: true,
+  origin: '*',
+  credentials: true
 }))
 app.use(express.json())
 app.use(cookieParser())
@@ -24,7 +25,7 @@ app.use('/api/v1', authRouter)
 app.use('/api/v1', rateRouter)
 
 app.get('/', (req, res) => {
-  res.send("Server is running").status(200)
+  res.send("<h1>Summer's server is running...</h1>").status(200)
 })
 
 app.all('*', (req, res) => {

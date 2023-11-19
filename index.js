@@ -13,7 +13,6 @@ const port = process.env.PORT || 5000
 // Add middleware
 app.use(express.urlencoded({ extended: false }))
 app.use(cors({
-  origin: ['https://limenight.github.io/cars', 'http://localhost:3000'],
   credentials: true,
 }))
 app.use(express.json())
@@ -24,8 +23,12 @@ app.use('/api/v1', carRouter)
 app.use('/api/v1', authRouter)
 app.use('/api/v1', rateRouter)
 
+app.get('/', (req, res) => {
+  res.send("Server is running").status(200)
+})
+
 app.all('*', (req, res) => {
-  res.send("Summer's Server is running.").status(200)
+  res.send("Not found!").status(404)
 })
 
 app.listen(port, () => {

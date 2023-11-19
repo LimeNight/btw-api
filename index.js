@@ -13,8 +13,8 @@ const port = process.env.PORT || 5000
 // Add middleware
 app.use(express.urlencoded({ extended: false }))
 app.use(cors({
+  credentials: true,
   origin: '*',
-  credentials: true
 }))
 app.use(express.json())
 app.use(cookieParser())

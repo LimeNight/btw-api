@@ -1,7 +1,7 @@
 {
   "version": 2,
   "rewrites": [
-    {"src" : "/(.*)", "dest" : "/index.js"}
+    {"source" : "/(.*)", "destiniation" : "/index.js"}
   ],
   "builds": [
     {

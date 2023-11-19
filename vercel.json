@@ -1,4 +1,8 @@
 {
+  "version": 2,
+  "rewrites": [
+    {"source" : "/(.*)", "destiniation" : "/index.js"}
+  ],
   "builds": [
     {
       "src": "./**/*.js",

@@ -28,6 +28,7 @@ carRouter.get("/:_id/cars", async (req, res) => {
     });
 });
 
+// get all cars
 carRouter.get("/cars", async (req, res) => {
   try {
     let results = await db.collection("car").aggregate([
@@ -48,6 +49,7 @@ carRouter.get("/cars", async (req, res) => {
 
 });
 
+// get car by id
 carRouter.get("/cars/:id", async (req, res) => {
   // check the id length before trying to find
   if (req.params.id.length !== 24) {

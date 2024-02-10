@@ -4,7 +4,8 @@
   "description": "Car-rent-ByTheWay App's backend.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "server": "node index.js"
   },
   "type": "module",
   "author": "SummerIvo",
